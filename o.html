@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example</title>
+  <style>
+    body {
+      background-color: rgb(183, 233, 249);
+      color: black;
+      text-align: center;
+      padding-top: 0;
+      margin: 0;
+    }
+    .top-section {
+      background-color: rgb(254, 254, 254);
+      padding: 90px;
+      position: relative;
+      z-index: 1;
+      transition: background-image 0.3s ease;
+    }
+    .top-section:hover {
+     
+      background-size: cover;
+      background-position: center;
+    }
+    .middle-section {
+      padding: 10px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .bottom-section {
+      background-color: rgb(248, 248, 248);
+      padding: 10px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      opacity: 0.6;
+      position: relative;
+      z-index: 1;
+    }
+    .photo-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0px;
+      z-index: 2;
+    }
+    .photo-container img {
+      cursor: pointer;
+      width: 300px;
+      height: 200px;
+      margin: 40px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      border: 5px solid white;
+      transition: transform 0.3s ease;
+    }
+    .photo-container img:hover {
+      transform: scale(1.2);
+    }
+    h1 {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(hai.png);
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+    .student-info {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function changeImage(element, newImage) {
+      element.src = newImage;
+    }
+  </script>
+</head>
+<body>
+  <div class="top-section">
+    <h1>KENTO EDA</h1>
+    <div class="student-info">
+      i2224011 
+    </div>
+  </div>
+  
+  <div class="middle-section">
+    <div class="photo-container">
+      <a href="a.html">
+        <img src="vol1.jpg" alt="写真 1" onmouseover="changeImage(this, 'cv.jpg')" onmouseout="changeImage(this, 'vol1.jpg')">
+      </a>
+      <a href="b.html">
+        <img src="vol2.jpg" alt="写真 2" onmouseover="changeImage(this, 'cv2.jpg')" onmouseout="changeImage(this, 'vol2.jpg')">
+      </a>
+      <a href="c.html">
+        <img src="vol3.jpg" alt="写真 3" onmouseover="changeImage(this, 'cv3.jpg')" onmouseout="changeImage(this, 'vol3.jpg')">
+      </a>
+    </div>
+    <div class="photo-container">
+      <a href="d.html">
+        <img src="vol4.jpg" alt="写真 4" onmouseover="changeImage(this, 'cv4.jpg')" onmouseout="changeImage(this, 'vol4.jpg')">
+      </a>
+      <a href="e.html">
+        <img src="vol5.jpg" alt="写真 5" onmouseover="changeImage(this, 'cv5.jpg')" onmouseout="changeImage(this, 'vol5.jpg')">
+      </a>
+      <a href="f.html">
+        <img src="vol6.jpg" alt="写真 6" onmouseover="changeImage(this, 'cv6.jpg')" onmouseout="changeImage(this, 'vol6.jpg')">
+      </a>
+    </div>
+  </div>
+  
+  <div class="bottom-section"></div>
+</body>
+</html>

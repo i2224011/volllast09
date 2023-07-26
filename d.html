@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+<title>Example</title>
+<style>
+  /* Noto Sans JP フォントを読み込む */
+  body {
+    background-color: rgb(183, 233, 249);
+    color: black;
+    text-align: center;
+    padding-top: 0;
+    margin: 0;
+  }
+ 
+  .top-section {
+    background-color: rgb(254, 254, 254);
+    padding: 90px;
+    position: relative;
+    z-index: 1;
+    transition: background-image 0.3s ease;
+  }
+  .top-section:hover {
+    background-image: url(b.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .middle-section {
+    padding: 50px 10px; /* 上下のパディングを調整 */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-section {
+    background-color: rgb(248, 248, 248);
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    opacity: 0.6;
+    position: relative;
+    z-index: 1;
+  }
+  .photo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    z-index: 2;
+    width: 300px;
+    height: 200px;
+  }
+  .photo-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 5px solid white;
+    transition: transform 0.3s ease;
+  }
+  .photo-container video:hover {
+    transform: scale(1.2);
+  }
+  h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(hai.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  .student-info {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  .description {
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid black;
+  }
+</style>
+</head>
+<body>
+  <div class="top-section">
+    <h1 class="game-font">レーザーカッター</h1>
+    <div class="student-info">
+      i2224011 
+    </div>
+  </div>
+  
+  <div class="middle-section">
+    <div class="photo-container">
+      <video src="az.mp4" controls></video>
+    </div>
+    <div class="description">
+      <h3>あずまあそび</h3>
+      <p>上の動画スライムがジャンプするというシンプルな作品です。</p>
+      <p>ソフトはブレンダーを使用しました。</p>
+      <p>作品概要としては、ブレンダーだけではなくアフタエフェクト</p>
+      <p>やプレミアなども使用した作品になってます。</p>
+    </div>
+  </div>
+  
+  <div class="bottom-section"></div>
+</body>
+</html>
